@@ -1,0 +1,173 @@
+{
+  "displayFieldName" : "ID_POSTE",
+  "fieldAliases" : {
+    "ADRESSE" : "ADRESSE"
+  },
+  "geometryType" : "esriGeometryPoint",
+  "spatialReference" : {
+    "wkid" : 2056
+  },
+  "fields" : [
+    {
+      "name" : "ADRESSE",
+      "type" : "esriFieldTypeString",
+      "alias" : "ADRESSE",
+      "length" : 50
+    }
+  ],
+  "features" : [
+    {
+      "attributes" : {
+        "ADRESSE" : "Rue de Carouge 51"
+      },
+      "geometry" : {
+        "x" : 2500046.1400999986,
+        "y" : 1116620.7453999966
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Boulevard Carl-VOGT 17"
+      },
+      "geometry" : {
+        "x" : 2499174.0401000008,
+        "y" : 1117355.4453999996
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Route du Pont-BUTIN 55"
+      },
+      "geometry" : {
+        "x" : 2497687.7401000001,
+        "y" : 1116191.2453999966
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Chemin de Blandonnet 2"
+      },
+      "geometry" : {
+        "x" : 2496510.9400999993,
+        "y" : 1119653.3453999981
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Avenue WENDT 61"
+      },
+      "geometry" : {
+        "x" : 2498923.1400999986,
+        "y" : 1118829.8453999981
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Rue de Genève 93"
+      },
+      "geometry" : {
+        "x" : 2504363.4400999993,
+        "y" : 1116545.9453999996
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Route de La-Capite 249"
+      },
+      "geometry" : {
+        "x" : 2505634.0401000008,
+        "y" : 1122426.5454000011
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Place Charles-DAVID 5"
+      },
+      "geometry" : {
+        "x" : 2502043.8401000015,
+        "y" : 1126084.1454000026
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Rue Adrien-LACHENAL 17"
+      },
+      "geometry" : {
+        "x" : 2501056.7401000001,
+        "y" : 1117247.0454000011
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Rue de Berne 6"
+      },
+      "geometry" : {
+        "x" : 2500168.9400999993,
+        "y" : 1118331.1454000026
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Place du Bourg-de-Four 3"
+      },
+      "geometry" : {
+        "x" : 2500481.3401000015,
+        "y" : 1117367.8453999981
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Rue de la Fontenette 16"
+      },
+      "geometry" : {
+        "x" : 2500151.3401000015,
+        "y" : 1115554.7453999966
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Chemin de la Gravière 5"
+      },
+      "geometry" : {
+        "x" : 2498941.9400999993,
+        "y" : 1117005.3453999981
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Quai Gustave-ADOR 11"
+      },
+      "geometry" : {
+        "x" : 2501034.9400999993,
+        "y" : 1117908.3453999981
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Place de Montbrillant 6"
+      },
+      "geometry" : {
+        "x" : 2499897.0401000008,
+        "y" : 1118469.5454000011
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Route de l'Aéroport 21"
+      },
+      "geometry" : {
+        "x" : 2497380.9891999997,
+        "y" : 1120744.1965000033
+      }
+    },
+    {
+      "attributes" : {
+        "ADRESSE" : "Chemin de Trèfle-Blanc 17"
+      },
+      "geometry" : {
+        "x" : 2498945.2401000001,
+        "y" : 1114099.4453999996
+      }
+    }
+  ]
+}
