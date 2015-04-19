@@ -21,7 +21,7 @@
 	<body > 
 <!-- begin template -->
 <div class="navbar navbar-custom navbar-fixed-top">
- <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a>
+ <div class="navbar-header"><a class="navbar-brand" href="#">Geneva Toolbox</a>
       <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -30,9 +30,13 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a id="btnPol" href="#">Police</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a id="btnTax" href="#">Taxi</a></li>
+        <li><a id="btnPol" href="#">Postes de Police</a></li>
+        <li><a id="btnPha" href="#">Pharmacies</a></li>
+         <li><a id="btnHop" href="#">Hopitaux & Cliniques</a></li>
+        <li><a id="btnPos" href="#">Bureaux de Poste</a></li>
+        <li><a id="btnMus" href="#">Musées</a></li>
+        
         <li>&nbsp;</li>
       </ul>
       <form class="navbar-form">
@@ -61,36 +65,36 @@
   <div class="row">
   	<div class="col-xs-8" id="left">
     
-      <h2>Geneva Toolbox</h2>
+      <h2></h2>
       
       <!-- item list -->
       <div class="panel panel-default">
-        <div class="panel-heading"><a href="">Check and Save</a></div>
+        <div class="panel-heading"><a href=""></a></div>
       </div>
      <form id="createForm" action="/new" method="post" accept-charset="utf-8">
             <table>
-                <tr>
+               <!--   <tr>
                     <td>Title</td>
                     <td><input type="text" name="title" id="title" size="66"/></td>
                 </tr>
                 <tr>
                     <td>Description</td>
                     <td><textarea rows="4" cols="50" name="description"    id="description"></textarea>
-                </tr>
+                </tr>-->
                 <tr>
                     <td>Latitude</td>
-                    <td><input type="text" name="latitude" id="latitude" size="66" /></td>
+                    <td><input disabled type="text" name="latitude" id="latitude" size="66" /></td>
                 </tr>
                 <tr>
                     <td>Longitude</td>
-                    <td><input type="text" name="longitude" id="longitude" size="66" /></td>
+                    <td><input disabled type="text" name="longitude" id="longitude" size="66" /></td>
                 </tr>
                 <tr>
                     <td>Address</td>
-                    <td><input type="text" name="address" id="address" size="66" /></td>
+                    <td><input disabled type="text" name="address" id="address" size="66" /></td>
                 </tr>
             </table><br/><br/>
-            <input type="submit" value="Save"/>
+            <!--  <input type="submit" value="Save"/> -->
         </form>
       
      
@@ -117,6 +121,5 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
 		<script src="js/scripts.js"></script>
-		<script src="js/locImporter.js"></script>
 	</body>
 </html>
