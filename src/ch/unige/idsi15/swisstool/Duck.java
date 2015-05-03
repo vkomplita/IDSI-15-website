@@ -11,7 +11,7 @@ public class Duck {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long duckId;
-     
+    private String idqrcode ;
     private double longitude;
     private double latitude;
     private String description;
@@ -23,6 +23,14 @@ public class Duck {
 	public void setDuckId(Long duckId) {
 		this.duckId = duckId;
 	}
+	
+	public String getIdqrcode() {
+		return idqrcode;
+	}
+	public void setIdqrcode(String idqrcode) {
+		this.idqrcode = idqrcode;
+	}
+	
 	public double getLongitude() {
 		return longitude;
 	}

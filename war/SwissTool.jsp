@@ -12,11 +12,13 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
-        
-           
-        
-            
-        
+      
+        	<script type="text/javascript" src="js/qrcode.min.js"></script>
+      	 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+			<script src="js/scripts.js"></script>
+        	
 	</head>
 	<body > 
 <!-- begin template -->
@@ -72,26 +74,22 @@
         <div class="panel-heading"><a href=""></a></div>
       </div>
      <form id="createForm" action="/new" method="post" accept-charset="utf-8">
-            <table>
-               <!--   <tr>
-                    <td>Title</td>
-                    <td><input type="text" name="title" id="title" size="66"/></td>
-                </tr>
-                <tr>
-                    <td>Description</td>
-                    <td><textarea rows="4" cols="50" name="description"    id="description"></textarea>
-                </tr>-->
-                <tr>
-                    <td>Latitude</td>
-                    <td><input disabled type="text" name="latitude" id="latitude" size="66" /></td>
-                </tr>
-                <tr>
-                    <td>Longitude</td>
-                    <td><input disabled type="text" name="longitude" id="longitude" size="66" /></td>
-                </tr>
-                <tr>
-                    <td>Address</td>
-                    <td><input disabled type="text" name="address" id="address" size="66" /></td>
+            <table id="tResult" style="display:table-block">
+            	<th>
+            		<td>Description</td><td>Latitude</td> <td>Longitude</td><td>Address</td><td>QrID</td>
+            		
+            	</th>
+                <tr id="row0">
+                    
+                    <td><textarea rows="1" cols="20" name="description0"  id="description0"></textarea></td>
+               
+                    <td><input disabled type="text" name="latitude0" id="latitude0" size="66" /></td>
+                
+                    <td><input disabled type="text" name="longitude0" id="longitude0" size="66" /></td>
+               
+                    <td><input disabled type="text" name="address0" id="address0" size="66" /></td>
+                
+                    <td><input disabled type="text" name="address0" id="idqrcode0" size="66" /></td>
                 </tr>
             </table><br/><br/>
             <!--  <input type="submit" value="Save"/> -->
@@ -102,10 +100,29 @@
       <!-- /item list -->
       
       <p>
-      <a href="http://www.bootply.com/render/129229">Demo</a> | <a href="http://bootply.com/129229">Source Code</a>
-      </p>
-      
-      <p id="test">
+      <!--  <div id="idqrcode"></div> -->
+  		<div id="qrcode"></div>
+		<script type="text/javascript">
+		
+		function makeId()
+		{
+		    var text = "";
+		    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+		    for( var i=0; i < 180; i++ )
+		        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+		    text+= Math.floor(Date.now() / 1000);
+
+		    
+		    
+		    $("#idqrcode").val(text);
+		    
+		    return text;
+		}
+		var resultId = makeId();
+		new QRCode(document.getElementById("qrcode"), resultId);
+		</script>
       </p>
            
 
@@ -117,9 +134,8 @@
 <!-- end template -->
 
 	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-		<script src="js/scripts.js"></script>
+	
+	
+		
 	</body>
 </html>

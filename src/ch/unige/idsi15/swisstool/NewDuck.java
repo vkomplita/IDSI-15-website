@@ -17,11 +17,13 @@ public class NewDuck extends HttpServlet {
  
         EntityManager entityManager = EntityManagerService.get().createEntityManager();
         Duck duck = new Duck();
+        /*
         duck.setTitle(req.getParameter("title"));
         duck.setDescription(req.getParameter("description"));
         duck.setLatitude(Double.parseDouble(req.getParameter("latitude")));
         duck.setLongitude(Double.parseDouble(req.getParameter("longitude")));
         duck.setAddress(req.getParameter("address"));
+        duck.setIdqrcode(req.getParameter("idqrcode")); */
         try {
             entityManager.persist(duck);
         } finally {

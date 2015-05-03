@@ -2,6 +2,7 @@
 $(document).ready(function(){/* google maps -----------------------------------------------------*/
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
 var map;
 var srcPol = 'https://www.worldwideconnects.org/test/police.kml';
 
@@ -13,8 +14,24 @@ var marker = new google.maps.Marker({
     position: latlng2,
     animation: google.maps.Animation.DROP
   });
-
 var infowindow = new google.maps.InfoWindow({ content: 'Location info:<br/>Country Name:<br/>LatLng:'});
+
+function makeId()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 200; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    text+= Math.floor(Date.now() / 1000);
+
+    
+    
+    $("#idqrcode").val(text);
+    
+    return text;
+}
 
 
 
@@ -65,6 +82,8 @@ function initialize() {
 	  var url ="https://www.worldwideconnects.org/test/culture.kml";
 	  loadKmlLayer(url, map);    
 	      });
+  
+ 
 };
 
 
@@ -74,14 +93,14 @@ function loadKmlLayer(src, map) {
 	
 	kmlLayer.setMap(null);
 	 kmlLayer = new google.maps.KmlLayer(src, {
-	    suppressInfoWindows: false,
+	    suppressInfoWindows: true,
 	    preserveViewport: false,
 	    map: map
 	  });
 	  google.maps.event.addListener(kmlLayer, 'click', function(kmlEvent) {
 		  
 		 locKml = kmlEvent.latLng;
-		 dropInfo(locKml);
+		dropInfo(locKml);
 		    /*var content = event.featureData.infoWindowHtml;
 		    var testimonial = document.getElementById('capture');
 		    testimonial.innerHTML = content;*/
