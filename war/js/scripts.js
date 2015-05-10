@@ -2,10 +2,8 @@
 $(document).ready(function(){/* google maps -----------------------------------------------------*/
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
+var kmlHost = "http://"+window.location.hostname+"/kml/";
 var map;
-var srcPol = 'https://www.worldwideconnects.org/test/police.kml';
-
 var kmlLayer = new google.maps.KmlLayer(null);
 
 var latlng2 = new google.maps.LatLng(46.200013,6.149985);
@@ -33,11 +31,26 @@ function makeId()
     return text;
 }
 
+function poster(){	
+	   $("button").click(function(){
+	        $.post("http://swisstoolweb.cfapps.io/markers",
+	        {
+	          qrCodeId: $("#idqrcode").val(),
+	          longitude: $("#longitude").val(),
+	          latitude: $("#latitude").val(),
+	          description: $("#description").val()
+	        },
+	        function(data,status){
+	            alert("Data: " + data + "\nStatus: " + status);
+	        });
+	    });
+}
+
 
 
 function initialize() {
  
-	
+	poster();
   var mapOptions = {
     center: latlng2,
     scrollWheel: false,
@@ -59,27 +72,27 @@ function initialize() {
   
   
   $('a#btnPol').click(function() { 
-	  var url ="https://www.worldwideconnects.org/test/police.kml";
+	  var url =kmlHost+"police.kml";
 	  loadKmlLayer(url, map);   
 	      });
   $('a#btnTax').click(function() { 
-	  var url ="https://www.worldwideconnects.org/test/taxi.kml";
+	  var url =kmlHost+"taxi.kml";
 	  loadKmlLayer(url, map);     
 	      });
   $('a#btnPha').click(function() { 
-	  var url ="https://www.worldwideconnects.org/test/pharma.kml";
+	  var url =kmlHost+"pharma.kml";
 	  loadKmlLayer(url, map);   
 	      });
   $('a#btnHop').click(function() { 
-	  var url ="https://www.worldwideconnects.org/test/sante.kml";
+	  var url =kmlHost+"sante.kml";
 	  loadKmlLayer(url, map);    
 	      });
   $('a#btnPos').click(function() { 
-	  var url ="https://www.worldwideconnects.org/test/poste.kml";
+	  var url =kmlHost+"poste.kml";
 	  loadKmlLayer(url, map);     
 	      });
   $('a#btnMus').click(function() { 
-	  var url ="https://www.worldwideconnects.org/test/culture.kml";
+	  var url =kmlHost+"culture.kml";
 	  loadKmlLayer(url, map);    
 	      });
   

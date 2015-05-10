@@ -10,25 +10,5 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<welcome-file>SwissTool.jsp</welcome-file>
 	</welcome-file-list>
 	
-	<servlet>
-    <servlet-name>NewDuck</servlet-name>
-    <servlet-class>ch.unige.idsi15.swisstool.NewDuck</servlet-class>
-</servlet>
-
-	<servlet-mapping>
-    <servlet-name>NewDuck</servlet-name>
-    <url-pattern>/new</url-pattern>
-</servlet-mapping>
-
-	<servlet>
-    <servlet-name>ListDuck</servlet-name>
-    <servlet-class>ch.unige.idsi15.swisstool.ListDuck</servlet-class>
-</servlet>
-
-	<servlet-mapping>
-    <servlet-name>ListDuck</servlet-name>
-    <url-pattern>/list</url-pattern>
-</servlet-mapping>
-	
 </web-app>
 

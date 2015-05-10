@@ -41,8 +41,8 @@
         
         <li>&nbsp;</li>
       </ul>
-      <form class="navbar-form">
-        <div class="form-group" style="display:inline;">
+      <form class="navbar-form" style="display:none;">
+        <div class="form-group" >
           <div class="input-group">
             <div class="input-group-btn">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -75,25 +75,34 @@
       </div>
      <form id="createForm" action="/new" method="post" accept-charset="utf-8">
             <table id="tResult" style="display:table-block">
-            	<th>
-            		<td>Description</td><td>Latitude</td> <td>Longitude</td><td>Address</td><td>QrID</td>
-            		
-            	</th>
-                <tr id="row0">
+            	<tr>
+            		<td>Description</td>
+            		<td><textarea rows="1" cols="20" name="description0"  id="description"></textarea></td>
+            	</tr>
+                <tr id="row0"  style="display:none;">
                     
-                    <td><textarea rows="1" cols="20" name="description0"  id="description0"></textarea></td>
-               
-                    <td><input disabled type="text" name="latitude0" id="latitude0" size="66" /></td>
-                
-                    <td><input disabled type="text" name="longitude0" id="longitude0" size="66" /></td>
-               
-                    <td><input disabled type="text" name="address0" id="address0" size="66" /></td>
-                
-                    <td><input disabled type="text" name="address0" id="idqrcode0" size="66" /></td>
+              		 <td>Latitude</td>
+                    <td><input disabled type="text" name="latitude0" id="latitude" size="66" /></td>
                 </tr>
+                <tr style="display:none;">
+                 <td>Longitude</td>
+                    <td><input disabled type="text" name="longitude0" id="longitude" size="66" /></td>
+                    </tr>
+                    <tr>
+               <td>Address</td>
+                    <td><input disabled type="text" name="address0" id="address" size="66" /></td>
+                    </tr>
+                    <tr style="display:none;">
+                <td>QrID</td>
+                    <td><input disabled type="text" name="address0" id="idqrcode" size="66" /></td>
+                    </tr>
+                    
+               
             </table><br/><br/>
             <!--  <input type="submit" value="Save"/> -->
         </form>
+      
+  <button id="button">Save LOcation</button>
       
      
       <hr>
