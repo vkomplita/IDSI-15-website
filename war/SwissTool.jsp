@@ -30,54 +30,29 @@
         <span class="icon-bar"></span>
       </a>
     </div>
+    <!-- Navigation bar -->
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a id="btnTax" href="#">Taxi</a></li>
         <li><a id="btnPol" href="#">Postes de Police</a></li>
         <li><a id="btnPha" href="#">Pharmacies</a></li>
-         <li><a id="btnHop" href="#">Hopitaux & Cliniques</a></li>
+        <li><a id="btnHop" href="#">Hopitaux & Cliniques</a></li>
         <li><a id="btnPos" href="#">Bureaux de Poste</a></li>
         <li><a id="btnMus" href="#">Musées</a></li>
-        
         <li>&nbsp;</li>
       </ul>
-      <form class="navbar-form" style="display:none;">
-        <div class="form-group" >
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Category 1</a></li>
-                <li><a href="#">Category 2</a></li>
-                <li><a href="#">Category 3</a></li>
-                <li><a href="#">Category 4</a></li>
-                <li><a href="#">Category 5</a></li> 
-              </ul>
-            </div>
-            <input type="text" class="form-control" placeholder="What are searching for?">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span> </span>
-          </div>
-        </div>
-      </form>
     </div>
 </div>
-
-<div id="map-canvas"></div>
+<!-- Map block -->
+<div id="map-canvas" style="z-index: 1;"></div>
 <div class="container-fluid" id="main">
   <div class="row">
   	<div class="col-xs-8" id="left">
-    
-      <h2></h2>
-      
-      <!-- item list -->
-      <div class="panel panel-default">
-        <div class="panel-heading"><a href=""></a></div>
-      </div>
      <form id="createForm" action="/new" method="post" accept-charset="utf-8">
             <table id="tResult" style="display:table-block">
             	<tr>
             		<td>Description</td>
-            		<td><textarea rows="1" cols="20" name="description0"  id="description"></textarea></td>
+            		<td><textarea rows="1" cols="40" name="description0"  id="description"></textarea></td>
             	</tr>
                 <tr id="row0"  style="display:none;">
                     
@@ -90,7 +65,7 @@
                     </tr>
                     <tr>
                <td>Address</td>
-                    <td><input disabled type="text" name="address0" id="address" size="66" /></td>
+                    <td><input disabled type="text" name="address0" id="address" size="40" /></td>
                     </tr>
                     <tr style="display:none;">
                 <td>QrID</td>
@@ -102,37 +77,36 @@
             <!--  <input type="submit" value="Save"/> -->
         </form>
       
-  <button id="button">Save LOcation</button>
-      
-     
-      <hr>
-      <!-- /item list -->
-      
-      <p>
-      <!--  <div id="idqrcode"></div> -->
-  		<div id="qrcode"></div>
+	<button id="button">Store Location</button>
+		<div id="qrcode"></div>
 		<script type="text/javascript">
-		
+		/**
+		 * Generate a random String id
+		 * @return String
+		 * source : http://stackoverflow.com/questions/1349404/generate-a-string-of-5-random-characters-in-javascript
+		 */
 		function makeId()
 		{
+			//Ininitalise returned variable 
 		    var text = "";
+		    //Character set
 		    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+			//Add 180 character sequencely 
+		    for( var i=0; i < 180; i++ ){
+		    	//pick a random charactere from the set
+		        text+= possible.charAt(Math.floor(Math.random() * possible.length));}
+				//add date to id
+		    	text+= Math.floor(Date.now() / 1000);
 
-		    for( var i=0; i < 180; i++ )
-		        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-		    text+= Math.floor(Date.now() / 1000);
-
-		    
-		    
 		    $("#idqrcode").val(text);
 		    
 		    return text;
 		}
+		//Creates Id and display corresponding qrCode in div#qrcode
 		var resultId = makeId();
 		new QRCode(document.getElementById("qrcode"), resultId);
 		</script>
-      </p>
+
            
 
     </div>

@@ -54,11 +54,19 @@ body{
 }
 
 #map-canvas {
-	width:33.3333%;
+	width:60%;
     height:calc(100% - 0);
     position:absolute;
     right:16px;
     top:50px;
     bottom:0;
     overflow:hidden;
+}
+form#createForm{
+	margin-top : 15px;
+}
+div#qrcode{
+	position: relative;
+	left: -128px;
+	margin-left: 256px;
 }
